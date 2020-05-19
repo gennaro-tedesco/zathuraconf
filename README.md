@@ -13,11 +13,11 @@ pip install click  ## or use your favourite package manager or virtual environme
 ## Usage
 Basic configuration attributes are provided in `basic.conf`: feel free to change at will. 
 
-Colour schemes must be provided following the examples that you can find in `colour_config/*.ini`: make your own or use the default ones. Such `.ini` files must be passed as arguments to the `setup.py` script 
+Colour schemes must be provided following the examples that you can find in `colour_config/*.ini`: make your own or use the default ones. Such `.ini` files must be passed as arguments to the `zathura_conf.py` script 
 ```
-python setup.py colour_config/solarized.ini 
+python zathura_conf.py colour_config/solarized.ini 
 ```
 We assume the zathura configuration file that we are creating is in its standard directory `~/.config/zathura/zathurarc` as per default installation. If not, pass its location on your local machine as second command line argument to the setup script
 ```
-python setup.py colour_config/solarized.ini ~/<new_location>/zathurarc
+python zathura_conf.py colour_config/solarized.ini ~/<new_location>/zathurarc
 ```

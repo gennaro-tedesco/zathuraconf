@@ -23,11 +23,7 @@ python zathura_conf.py colour_config/solarized.ini ~/<new_location>/zathurarc
 ```
 
 ## Examples
-<p align="middle">
-  <img src="/examples/gruvbox.png" width="350" height="300"/>
-  <img src="/examples/solarized.png" width="350" height="300"/> 
-</p>
-<p align="middle">
-  <img src="/examples/nord.png" width="350" height="300/>
-  <img src="/examples/purple.png" width="350" height="300"/> 
-</p>
+Solarized dark             |  Nord
+:-------------------------:|:-------------------------:
+![solarized](https://github.com/gennaro-tedesco/zathuraconf/blob/master/examples/solarized.png)  |  ![nord](https://github.com/gennaro-tedesco/zathuraconf/blob/master/examples/nord.png)
+

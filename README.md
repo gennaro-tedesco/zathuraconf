@@ -23,11 +23,11 @@ python zathura_conf.py colour_config/solarized.ini ~/<new_location>/zathurarc
 ```
 
 ## Examples
-<p float="left">
-  <img src="/examples/gruvbox.pgn" width="150" />
-  <img src="/examples/solarized.pgn" width="150" /> 
+<p float="middle">
+  <img src="/examples/gruvbox.png" width="150" />
+  <img src="/examples/solarized.png" width="150" /> 
 </p>
-<p float="left">
-  <img src="/examples/nord.pgn" width="150" />
-  <img src="/examples/purple.pgn" width="150" /> 
+<p float="middle">
+  <img src="/examples/nord.png" width="150" />
+  <img src="/examples/purple.png" width="150" /> 
 </p>

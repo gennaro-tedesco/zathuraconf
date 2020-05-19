@@ -21,3 +21,13 @@ We assume the zathura configuration file that we are creating is in its standard
 ```
 python zathura_conf.py colour_config/solarized.ini ~/<new_location>/zathurarc
 ```
+
+## Examples
+<p float="left">
+  <img src="/examples/gruvbox.pgn" width="150" />
+  <img src="/examples/solarized.pgn" width="150" /> 
+</p>
+<p float="left">
+  <img src="/examples/nord.pgn" width="150" />
+  <img src="/examples/purple.pgn" width="150" /> 
+</p>

@@ -25,5 +25,5 @@ python zathura_conf.py colour_config/solarized.ini ~/<new_location>/zathurarc
 ## Examples
 Solarized dark             |  Nord
 :-------------------------:|:-------------------------:
-![solarized](https://github.com/gennaro-tedesco/zathuraconf/blob/master/examples/solarized.png)  |  ![nord](https://github.com/gennaro-tedesco/zathuraconf/blob/master/examples/nord.png)
+![solarized](https://github.com/gennaro-tedesco/zathuraconf/blob/master/examples/solarized.png)  |  ![nord](https://github.com/gennaro-tedesco/zathuraconf/blob/master/examples/onedark.png)
 

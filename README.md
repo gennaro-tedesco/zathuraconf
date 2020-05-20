@@ -1,5 +1,5 @@
 # Zathuraconf
-Create colour schemes configuration files for zathura starting from simple colour palettes provided in form of `.ini` files. To the basic configuration attributes (as indicated in `basic.conf`), we append the colour schemes by parsing the arguments given in the `.ini`.
+Create colour schemes configuration files for [zathura](https://pwmt.org/projects/zathura/) starting from simple colour palettes provided in form of `.ini` files. To the basic configuration attributes (as indicated in `basic.conf`), we append the colour schemes by parsing the arguments given in the `.ini`.
 
 ## Installation and requirements
 The script is written in Python 3.X; the only additional package needed is the command line interface `click`.  

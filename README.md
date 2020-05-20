@@ -7,7 +7,7 @@ The script is written in Python 3.X; the only additional package needed is the c
 git clone https://github.com/gennaro-tedesco/zathuraconf.git 
 cd zathuraconf
 
-pip install click  ## or use your favourite package manager or virtual environment
+pip3 install click  ## or use your favourite package manager or virtual environment
 ```
 
 ## Usage

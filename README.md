@@ -23,8 +23,8 @@ python zathura_conf.py colour_config/solarized.ini ~/<new_location>/zathurarc
 ```
 
 ## Examples
-<img align="center" height="150" src="colour_config/solarized.png">
-<img align="center" height="150" src="colour_config/onedark..png">
+<img align="center" height="350" src="examples/solarized.png">
+<img align="center" height="350" src="examples/onedark..png">
 
 
 

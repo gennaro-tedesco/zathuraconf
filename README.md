@@ -12,13 +12,13 @@ pip3 install -e .
 ```
 zathura_conf /path/to/colour/scheme 
 ```
-Colour schemes must be provided following the examples in `colour_config/*.ini`: make your own or use the default ones. Such `.ini` files must be passed as arguments to the script 
+Colour schemes must be provided following the examples in `config/*.ini`: make your own or use the default ones. Such `.ini` files must be passed as arguments to the script 
 ```
-zathura_conf colour_config/solarized.ini 
+zathura_conf config/solarized.ini 
 ```
 Basic configuration attributes are provided in `basic.conf`: feel free to change at will. We assume the zathura configuration file that we are creating is in its standard directory `~/.config/zathura/zathurarc` as per default installation. If not, pass its location on your local machine as second command line argument to the setup script
 ```
-zathura_conf colour_config/solarized.ini /path/to/different/zathurarc
+zathura_conf config/solarized.ini /path/to/different/zathurarc
 ```
 
 ## Examples

@@ -1,4 +1,5 @@
 from setuptools import setup
+
 setup(
     name='zathura_conf',
     version='1.0',

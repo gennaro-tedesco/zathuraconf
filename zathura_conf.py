@@ -37,7 +37,7 @@ def parse_colour_schema(ini_file: str, zathurarc: str) -> Dict:
 			f.write('set notification-bg		  {}\n'.format(d['bg']))
 			f.write('set notification-fg		  {}\n'.format(d['error']))
 			f.write('set completion-group-bg	  {}\n'.format(d['bg']))
-			f.write('set completion-group-fg	  {}\n'.format(d['highlight_active']))
+			f.write('set completion-group-fg	  {}\n'.format(d['highlight']))
 			f.write('set completion-bg			  {}\n'.format(d['page']))
 			f.write('set completion-fg			  {}\n'.format(d['text']))
 			f.write('set completion-highlight-bg  {}\n'.format(d['highlight']))

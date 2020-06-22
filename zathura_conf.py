@@ -55,6 +55,8 @@ def parse_colour_schema(ini_file: str, zathurarc: str) -> Dict:
 			f.write('set recolor-darkcolor		  {}\n'.format(d['text']))
 			f.write('set index-bg				  {}\n'.format(d['page']))
 			f.write('set index-fg                 {}\n'.format(d['text']))
+			f.write('set index-active-bg          {}\n'.format(d['highlight']))
+			f.write('set index-active-fg          {}\n'.format(d['bg']))
 
 if __name__ == "__main__":
 	parse_colour_schema()

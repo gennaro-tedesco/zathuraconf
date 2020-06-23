@@ -10,7 +10,7 @@ setup(
 	install_requires=['click'],
     entry_points={
         'console_scripts': [
-            'zathura_conf=zathura_conf:parse_colour_schema'
+            'zathura_conf=zathura_conf:configure'
         ]
     }
 )

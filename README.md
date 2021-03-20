@@ -1,7 +1,21 @@
-# Zathuraconf
+<h1 align="center">
+  Zathuraconf
+</h1>
+
+<h2 align="center">
+  <img alt="Python" src="https://img.shields.io/badge/python%20-%231572B6.svg?&style=flat&logo=python&logoColor=white"/>
+</h2>
+
+<h4 align="center">Configure Zathura theme!</h4>
+<h3 align="center">
+  <a href="#Installation">Installation</a> •
+  <a href="#Usage">Usage</a> •
+  <a href="#Examples">Examples</a>
+</h3>
+
 Creates colour schemes configuration files for [zathura](https://pwmt.org/projects/zathura/) starting from simple colour palettes provided in form of `.ini` files. To the basic configuration attributes (as indicated in `basic.conf`), we append the colour schemes by parsing the arguments given in the `.ini`.
 
-## Installation and requirements
+## Installation
 ```
 git clone https://github.com/gennaro-tedesco/zathuraconf.git 
 cd zathuraconf
@@ -29,5 +43,4 @@ zathura_conf config/solarized.ini /path/to/different/zathurarc
 <p align="center">
   <img height="600" src="examples/onedark.png">
 </p>
-
 

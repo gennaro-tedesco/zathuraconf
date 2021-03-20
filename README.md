@@ -2,10 +2,6 @@
   Zathuraconf
 </h1>
 
-<h2 align="center">
-  <img alt="Python" src="https://img.shields.io/badge/python%20-%231572B6.svg?&style=flat&logo=python&logoColor=white"/>
-</h2>
-
 <h4 align="center">Configure Zathura theme!</h4>
 <h3 align="center">
   <a href="#Installation">Installation</a> •

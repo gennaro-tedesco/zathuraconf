@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -14,8 +12,7 @@ var rootCmd = &cobra.Command{
 	Short: "change zathura colour scheme",
 	Long:  `change zathura colour scheme from command line`,
 	Run: func(cmd *cobra.Command, args []string) {
-		cc := getColourConfig(args[0])
-		fmt.Println(cc)
+		writeConfig(args[0])
 	},
 }
 

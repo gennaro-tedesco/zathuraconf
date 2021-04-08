@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 )
 
 func getDefault() string {
@@ -38,20 +39,24 @@ map [fullscreen] f toggle_fullscreen
 }
 
 type ColourConfig struct {
-	Page             string `json: "page"`
-	Text             string `json: "text"`
-	Background       string `json: "background"`
-	Highlight        string `json: "highlight"`
-	Highlight_active string `json: "highlight_active"`
-	Error            string `json: "error"`
+	Page             string `json:"page"`
+	Text             string `json:"text"`
+	Background       string `json:"background"`
+	Highlight        string `json:"highlight"`
+	Highlight_active string `json:"highlight_active"`
+	Error            string `json:"error"`
 }
 
-func getColourConfig() ColourConfig {
-	file, err := ioutil.ReadFile("examples/solarized_dark.json")
+func getColourConfig(filename string) ColourConfig {
+	if filepath.Ext(filename) != ".json" {
+		fmt.Printf("please provide a valid json file")
+		os.Exit(1)
+	}
+	file, err := ioutil.ReadFile(filename)
 
 	if err != nil {
 		if errors.Is(err, os.ErrNotExist) {
-			fmt.Println("file doesn't exist")
+			fmt.Printf("file %s doesn't exist", filename)
 			os.Exit(1)
 		}
 	}

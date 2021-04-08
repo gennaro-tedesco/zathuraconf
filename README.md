@@ -1,5 +1,5 @@
 <h1 align="center">
-  Zathuraconf
+  zathuraconf
 </h1>
 
 <h4 align="center">Configure Zathura theme!</h4>
@@ -45,13 +45,9 @@ See `zathuraconf -h` for details.
 The colour schemes settings are appended to a default configuration of zathura commands [specified here](https://github.com/gennaro-tedesco/zathuraconf/blob/6b64a7814737bdb930e7f44e53a0a407c6ab3a01/cmd/config.go#L16-L39): these defaults are standard and natural, however should you feel the need to change them, modify those lines at will.
 
 ## Examples
-<p align="center">
-  <img height="600" src="examples/solarized.png">
-</p>
-
-<p align="center">
-  <img height="600" src="examples/onedark.png">
-</p>
+Solarized             |  One dark
+:-------------------------:|:-------------------------:
+![](https://user-images.githubusercontent.com/15387611/114108427-5cf4ca80-98d3-11eb-8b39-99600dd42807.png)  |  ![](https://user-images.githubusercontent.com/15387611/114108475-6ed66d80-98d3-11eb-9a45-4bd992d33b29.png)
 
 
 ## Tests

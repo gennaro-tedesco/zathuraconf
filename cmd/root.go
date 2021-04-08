@@ -37,10 +37,6 @@ zathuraconf: change zathura colour scheme
 Arguments:
   config.json    configuration file containing colour scheme
 
-Usage:
-  Provide a config.json file of the form (example)
-
-  config.json
   {
 	"page": "#073642",
 	"text": "#93a1a1",
@@ -50,11 +46,8 @@ Usage:
 	"error": "#cb4b16"
   }
 
-  and simply run
-      zathuraconf config.json
-
-  If your zathurarc is in a different path than ~/.config/zathura/zathurarc
-	  zathurarc config.json -p /path/to/zathuraconf
+Usage:
+  zathuraconf config.json [flag]
 
 Help commands:
   version     print current version

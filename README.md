@@ -18,7 +18,7 @@ go get -u -v github.com/gennaro-tedesco/zathuraconf
 ```
 
 ## Usage
-Choose a colour configuration [from the examples](https://github.com/gennaro-tedesco/zathuraconf/tree/gomodule/examples) or make your own `config.json`:
+Choose a colour configuration [from the examples](https://github.com/gennaro-tedesco/zathuraconf/tree/master/examples) or make your own `config.json`:
 ```
 {
   "page": "#3c3836", <-- change colours here
@@ -42,10 +42,10 @@ See `zathuraconf -h` for details.
 
 
 ### Change defaults
-The colour schemes settings are appended to a default configuration of zathura commands [specified here](https://github.com/gennaro-tedesco/zathuraconf/blob/6b64a7814737bdb930e7f44e53a0a407c6ab3a01/cmd/config.go#L16-L39): these defaults are standard and natural, however should you feel the need to change them, modify those lines at will.
+The colour schemes settings are appended to a default configuration of zathura commands [specified here](https://github.com/gennaro-tedesco/zathuraconf/blob/470c5d12378c8b29eff85b58818e0daa844edff7/cmd/config.go#L14-L41): these defaults are standard and natural, however should you feel the need to change them, modify those lines at will.
 
 ## Examples
-Solarized             |  One dark
+Solarized             |  One dark 
 :-------------------------:|:-------------------------:
 ![](https://user-images.githubusercontent.com/15387611/114108427-5cf4ca80-98d3-11eb-8b39-99600dd42807.png)  |  ![](https://user-images.githubusercontent.com/15387611/114108475-6ed66d80-98d3-11eb-9a45-4bd992d33b29.png)
 

@@ -1,10 +1,14 @@
 package cmd
 
 import (
+	"os/user"
+
 	"github.com/spf13/cobra"
 )
 
-const ZATHURARC = "~/.config/zathura/zathurarc"
+var usr, _ = user.Current()
+var dir = usr.HomeDir
+var ZATHURARC = dir + "/.config/zathura/zathurarc"
 
 var rootCmd = &cobra.Command{
 	Use:   "zathuraconf",
@@ -12,7 +16,8 @@ var rootCmd = &cobra.Command{
 	Short: "change zathura colour scheme",
 	Long:  `change zathura colour scheme from command line`,
 	Run: func(cmd *cobra.Command, args []string) {
-		writeConfig(args[0])
+		rc_file, _ := cmd.Flags().GetString("path")
+		writeConfig(args[0], rc_file)
 	},
 }
 

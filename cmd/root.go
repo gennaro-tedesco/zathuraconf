@@ -10,11 +10,11 @@ const ZATHURARC = "~/.config/zathura/zathurarc"
 
 var rootCmd = &cobra.Command{
 	Use:   "zathuraconf",
+	Args:  cobra.ExactArgs(1),
 	Short: "change zathura colour scheme",
 	Long:  `change zathura colour scheme from command line`,
 	Run: func(cmd *cobra.Command, args []string) {
-		writeConfig()
-		cc := getColourConfig()
+		cc := getColourConfig(args[0])
 		fmt.Println(cc)
 	},
 }
@@ -36,13 +36,23 @@ Arguments:
   config.json    configuration file containing colour scheme
 
 Usage:
-  Provide a config.json file of the form
-  ...
+  Provide a config.json file of the form (example)
+
+  config.json
+  {
+	"page": "#073642",
+	"text": "#93a1a1",
+	"background": "#002b36",
+	"highlight": "#859900",
+	"highlight_active": "#268bd2",
+	"error": "#cb4b16"
+  }
+
   and simply run
       zathuraconf config.json
 
-  If your zathuraconf is in a different path than ~/.config/zathura/zathurarc
-	  zathuraconf config.json -p /path/to/zathuraconf
+  If your zathurarc is in a different path than ~/.config/zathura/zathurarc
+	  zathurarc config.json -p /path/to/zathuraconf
 
 Help commands:
   version     print current version

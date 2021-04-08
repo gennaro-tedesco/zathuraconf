@@ -37,6 +37,7 @@ map i recolor
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
+
 `
 }
 
@@ -86,12 +87,41 @@ func getColourConfig(filename string) ColourConfig {
 	return colour_config
 }
 
-func writeConfig() {
+func writeConfig(filename string) {
 	file, err := os.Create("text.txt")
 	if err != nil {
 		return
 	}
 	defer file.Close()
 
+	colour_config := getColourConfig(filename)
 	file.WriteString(getDefault())
+	file.WriteString("# ----- colour config ----- \n")
+	file.WriteString("set notification-error-bg " + colour_config.Background + "\n")
+	file.WriteString("set notification-error-fg " + colour_config.Error + "\n")
+	file.WriteString("set notification-warning-bg " + colour_config.Background + "\n")
+	file.WriteString("set notification-warning-fg " + colour_config.Error + "\n")
+	file.WriteString("set notification-bg " + colour_config.Background + "\n")
+	file.WriteString("set notification-fg " + colour_config.Error + "\n")
+	file.WriteString("set completion-group-bg " + colour_config.Background + "\n")
+	file.WriteString("set completion-group-fg " + colour_config.Highlight + "\n")
+	file.WriteString("set completion-bg " + colour_config.Page + "\n")
+	file.WriteString("set completion-fg " + colour_config.Text + "\n")
+	file.WriteString("set completion-highlight-bg " + colour_config.Highlight + "\n")
+	file.WriteString("set completion-highlight-fg " + colour_config.Background + "\n")
+	file.WriteString("set inputbar-bg " + colour_config.Background + "\n")
+	file.WriteString("set inputbar-fg " + colour_config.Text + "\n")
+	file.WriteString("set statusbar-bg " + colour_config.Background + "\n")
+	file.WriteString("set statusbar-fg " + colour_config.Text + "\n")
+	file.WriteString("set highlight-color " + colour_config.Highlight + "\n")
+	file.WriteString("set highlight-active-color " + colour_config.Highlight_active + "\n")
+	file.WriteString("set default-bg " + colour_config.Background + "\n")
+	file.WriteString("set default-fg " + colour_config.Text + "\n")
+	file.WriteString("set recolor-lightcolor " + colour_config.Page + "\n")
+	file.WriteString("set recolor-darkcolor " + colour_config.Text + "\n")
+	file.WriteString("set index-bg " + colour_config.Page + "\n")
+	file.WriteString("set index-fg " + colour_config.Text + "\n")
+	file.WriteString("set index-active-bg " + colour_config.Highlight + "\n")
+	file.WriteString("set index-active-fg " + colour_config.Background + "\n")
+	file.WriteString("set recolor " + "true" + "\n")
 }

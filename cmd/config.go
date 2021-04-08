@@ -32,7 +32,6 @@ set font "Fira Code 15"
 set selection-clipboard clipboard
 
 # mappings
-map i recolor
 
 unmap f
 map f toggle_fullscreen

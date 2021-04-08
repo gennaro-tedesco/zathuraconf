@@ -7,6 +7,8 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+
+	"github.com/go-playground/validator/v10"
 )
 
 func getDefault() string {
@@ -39,12 +41,26 @@ map [fullscreen] f toggle_fullscreen
 }
 
 type ColourConfig struct {
-	Page             string `json:"page"`
-	Text             string `json:"text"`
-	Background       string `json:"background"`
-	Highlight        string `json:"highlight"`
-	Highlight_active string `json:"highlight_active"`
-	Error            string `json:"error"`
+	Page             string `json:"page" validate:"iscolor"`
+	Text             string `json:"text" validate:"iscolor"`
+	Background       string `json:"background" validate:"iscolor"`
+	Highlight        string `json:"highlight" validate:"iscolor"`
+	Highlight_active string `json:"highlight_active" validate:"iscolor"`
+	Error            string `json:"error" validate:"iscolor"`
+}
+
+func isValidConfig(colour_config ColourConfig) bool {
+	v := validator.New()
+	v_err := v.Struct(colour_config)
+
+	if v_err != nil {
+		for _, v_err := range v_err.(validator.ValidationErrors) {
+			fmt.Println(v_err)
+		}
+		return false
+	} else {
+		return true
+	}
 }
 
 func getColourConfig(filename string) ColourConfig {
@@ -63,6 +79,10 @@ func getColourConfig(filename string) ColourConfig {
 
 	colour_config := ColourConfig{}
 	_ = json.Unmarshal([]byte(file), &colour_config)
+
+	if !isValidConfig(colour_config) {
+		os.Exit(1)
+	}
 	return colour_config
 }
 

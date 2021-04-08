@@ -1,9 +1,2 @@
-.DS_Store
-
-# directories
-__pycache__/ 
-*.egg-info/
-
-# colour files
-colourtheme.conf
-
+*.txt
+*.pdf

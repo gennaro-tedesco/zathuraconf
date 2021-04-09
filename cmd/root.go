@@ -8,7 +8,7 @@ import (
 
 var usr, _ = user.Current()
 var dir = usr.HomeDir
-var ZATHURARC = dir + "/.config/zathura/zathurarc"
+var zathurarcfile = dir + "/.config/zathura/zathurarc"
 
 var rootCmd = &cobra.Command{
 	Use:   "zathuraconf",
@@ -27,7 +27,7 @@ func Execute() {
 
 func init() {
 	rootCmd.SetHelpTemplate(getRootHelp())
-	rootCmd.Flags().StringP("path", "p", ZATHURARC, "path to zathurarc location")
+	rootCmd.Flags().StringP("path", "p", zathurarcfile, "path to zathurarc location")
 }
 
 func getRootHelp() string {

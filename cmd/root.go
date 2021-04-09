@@ -26,11 +26,11 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.SetHelpTemplate(GetRootHelp())
+	rootCmd.SetHelpTemplate(getRootHelp())
 	rootCmd.Flags().StringP("path", "p", ZATHURARC, "path to zathurarc location")
 }
 
-func GetRootHelp() string {
+func getRootHelp() string {
 	return `
 zathuraconf: change zathura colour scheme
 

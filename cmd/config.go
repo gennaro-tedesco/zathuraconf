@@ -57,13 +57,14 @@ func isValidConfig(colour_config ColourConfig) bool {
 		for _, v_err := range v_err.(validator.ValidationErrors) {
 			fmt.Println(v_err)
 		}
+		fmt.Println("please provide valid json")
 		return false
 	} else {
 		return true
 	}
 }
 
-func getColourConfig(filename string) ColourConfig {
+func getColourConfig(filename string) (ColourConfig, bool) {
 	if filepath.Ext(filename) != ".json" {
 		fmt.Printf("please provide a valid json file")
 		os.Exit(1)
@@ -81,46 +82,48 @@ func getColourConfig(filename string) ColourConfig {
 	_ = json.Unmarshal([]byte(file), &colour_config)
 
 	if !isValidConfig(colour_config) {
-		os.Exit(1)
+		return colour_config, false
 	}
-	return colour_config
+	return colour_config, true
 }
 
 func writeConfig(colour_file string, rc_file string) {
 	file, err := os.Create(rc_file)
 	if err != nil {
+		fmt.Println(err)
 		return
 	}
 	defer file.Close()
 
-	colour_config := getColourConfig(colour_file)
-	file.WriteString(getDefault())
-	file.WriteString("# ----- colour config ----- \n")
-	file.WriteString("set notification-error-bg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set notification-error-fg \"" + colour_config.Error + "\"\n")
-	file.WriteString("set notification-warning-bg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set notification-warning-fg \"" + colour_config.Error + "\"\n")
-	file.WriteString("set notification-bg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set notification-fg \"" + colour_config.Error + "\"\n")
-	file.WriteString("set completion-group-bg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set completion-group-fg \"" + colour_config.Highlight + "\"\n")
-	file.WriteString("set completion-bg \"" + colour_config.Page + "\"\n")
-	file.WriteString("set completion-fg \"" + colour_config.Text + "\"\n")
-	file.WriteString("set completion-highlight-bg \"" + colour_config.Highlight + "\"\n")
-	file.WriteString("set completion-highlight-fg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set inputbar-bg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set inputbar-fg \"" + colour_config.Text + "\"\n")
-	file.WriteString("set statusbar-bg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set statusbar-fg \"" + colour_config.Text + "\"\n")
-	file.WriteString("set highlight-color \"" + colour_config.Highlight + "\"\n")
-	file.WriteString("set highlight-active-color \"" + colour_config.Highlight_active + "\"\n")
-	file.WriteString("set default-bg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set default-fg " + colour_config.Text + "\n")
-	file.WriteString("set recolor-lightcolor \"" + colour_config.Page + "\"\n")
-	file.WriteString("set recolor-darkcolor \"" + colour_config.Text + "\"\n")
-	file.WriteString("set index-bg \"" + colour_config.Page + "\"\n")
-	file.WriteString("set index-fg \"" + colour_config.Text + "\"\n")
-	file.WriteString("set index-active-bg \"" + colour_config.Highlight + "\"\n")
-	file.WriteString("set index-active-fg \"" + colour_config.Background + "\"\n")
-	file.WriteString("set recolor " + "true" + "\n")
+	if colour_config, ok := getColourConfig(colour_file); ok {
+		file.WriteString(getDefault())
+		file.WriteString("# ----- colour config ----- \n")
+		file.WriteString("set notification-error-bg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set notification-error-fg \"" + colour_config.Error + "\"\n")
+		file.WriteString("set notification-warning-bg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set notification-warning-fg \"" + colour_config.Error + "\"\n")
+		file.WriteString("set notification-bg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set notification-fg \"" + colour_config.Error + "\"\n")
+		file.WriteString("set completion-group-bg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set completion-group-fg \"" + colour_config.Highlight + "\"\n")
+		file.WriteString("set completion-bg \"" + colour_config.Page + "\"\n")
+		file.WriteString("set completion-fg \"" + colour_config.Text + "\"\n")
+		file.WriteString("set completion-highlight-bg \"" + colour_config.Highlight + "\"\n")
+		file.WriteString("set completion-highlight-fg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set inputbar-bg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set inputbar-fg \"" + colour_config.Text + "\"\n")
+		file.WriteString("set statusbar-bg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set statusbar-fg \"" + colour_config.Text + "\"\n")
+		file.WriteString("set highlight-color \"" + colour_config.Highlight + "\"\n")
+		file.WriteString("set highlight-active-color \"" + colour_config.Highlight_active + "\"\n")
+		file.WriteString("set default-bg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set default-fg " + colour_config.Text + "\n")
+		file.WriteString("set recolor-lightcolor \"" + colour_config.Page + "\"\n")
+		file.WriteString("set recolor-darkcolor \"" + colour_config.Text + "\"\n")
+		file.WriteString("set index-bg \"" + colour_config.Page + "\"\n")
+		file.WriteString("set index-fg \"" + colour_config.Text + "\"\n")
+		file.WriteString("set index-active-bg \"" + colour_config.Highlight + "\"\n")
+		file.WriteString("set index-active-fg \"" + colour_config.Background + "\"\n")
+		file.WriteString("set recolor " + "true" + "\n")
+	}
 }

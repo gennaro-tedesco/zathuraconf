@@ -52,10 +52,17 @@ The colour schemes settings are appended to a default configuration of zathura c
   zathuraconf examples/solarized_dark.json
   ```
   <img alt="solarized" src="https://user-images.githubusercontent.com/15387611/114108427-5cf4ca80-98d3-11eb-8b39-99600dd42807.png">
+
   ```
   zathuraconf examples/onedark.json
   ```
   <img alt="onedark" src="https://user-images.githubusercontent.com/15387611/114108475-6ed66d80-98d3-11eb-9a45-4bd992d33b29.png">
+
+
+  ```
+  zathuraconf examples/gruvbox.json
+  ```
+  <img alt="gruvbox" src="https://user-images.githubusercontent.com/15387611/114167059-c48c3380-992e-11eb-8c13-125635acdde3.png">
 </details>
 
 

@@ -2,6 +2,18 @@
   zathuraconf
 </h1>
 
+<h2 align="center">
+  <a href="#" onclick="return false;">
+    <img alt="PR" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"/>
+  </a>
+  <a href="https://golang.org/">
+    <img alt="Go" src="https://img.shields.io/badge/go-%2300ADD8.svg?&style=flat&logo=go&logoColor=white"/>
+  </a>
+  <a href="https://github.com/gennaro-tedesco/zathuraconf/releases">
+    <img alt="releases" src="https://img.shields.io/github/release/gennaro-tedesco/zathuraconf"/>
+  </a>
+</h2>
+
 <h4 align="center">Configure Zathura theme!</h4>
 <h3 align="center">
   <a href="#Installation">Installation</a> •

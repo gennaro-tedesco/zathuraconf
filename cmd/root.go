@@ -16,8 +16,8 @@ var rootCmd = &cobra.Command{
 	Short: "change zathura colour scheme",
 	Long:  `change zathura colour scheme from command line`,
 	Run: func(cmd *cobra.Command, args []string) {
-		rc_file, _ := cmd.Flags().GetString("path")
-		writeConfig(args[0], rc_file)
+		rcFile, _ := cmd.Flags().GetString("path")
+		writeConfig(args[0], rcFile)
 	},
 }
 

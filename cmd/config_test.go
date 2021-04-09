@@ -8,22 +8,22 @@ import (
 )
 
 func TestValidConfig(t *testing.T) {
-	valid_json_file := "../examples/solarized_dark.json"
+	validJsonFile := "../examples/solarized_dark.json"
 
-	valid_file, _ := ioutil.ReadFile(valid_json_file)
+	validFile, _ := ioutil.ReadFile(validJsonFile)
 
-	valid_colour_config := ColourConfig{}
-	_ = json.Unmarshal([]byte(valid_file), &valid_colour_config)
-	assert.Equal(t, true, isValidConfig(valid_colour_config))
+	validColourConfig := ColourConfig{}
+	_ = json.Unmarshal([]byte(validFile), &validColourConfig)
+	assert.Equal(t, true, isValidConfig(validColourConfig))
 
 }
 
 func TestInValidConfig(t *testing.T) {
-	invalid_json_file := "../examples/invalid.json"
+	invalidJsonFile := "../examples/invalid.json"
 
-	invalid_file, _ := ioutil.ReadFile(invalid_json_file)
+	invalidFile, _ := ioutil.ReadFile(invalidJsonFile)
 
-	invalid_colour_config := ColourConfig{}
-	_ = json.Unmarshal([]byte(invalid_file), &invalid_colour_config)
-	assert.Equal(t, false, isValidConfig(invalid_colour_config))
+	invalidColourConfig := ColourConfig{}
+	_ = json.Unmarshal([]byte(invalidFile), &invalidColourConfig)
+	assert.Equal(t, false, isValidConfig(invalidColourConfig))
 }

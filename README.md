@@ -1,4 +1,7 @@
 <h1 align="center">
+  <br>
+  <img width="200" height="200" src="https://pwmt.org/static/img/icon-puzzle.png">
+  <br>
   zathuraconf
 </h1>
 

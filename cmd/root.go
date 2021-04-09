@@ -8,7 +8,7 @@ import (
 
 var usr, _ = user.Current()
 var dir = usr.HomeDir
-var ZATHURARC = dir + "/.config/zathura/zathurarc"
+var zathurarcfile = dir + "/.config/zathura/zathurarc"
 
 var rootCmd = &cobra.Command{
 	Use:   "zathuraconf",
@@ -16,8 +16,8 @@ var rootCmd = &cobra.Command{
 	Short: "change zathura colour scheme",
 	Long:  `change zathura colour scheme from command line`,
 	Run: func(cmd *cobra.Command, args []string) {
-		rc_file, _ := cmd.Flags().GetString("path")
-		writeConfig(args[0], rc_file)
+		rcFile, _ := cmd.Flags().GetString("path")
+		writeConfig(args[0], rcFile)
 	},
 }
 
@@ -26,11 +26,11 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.SetHelpTemplate(GetRootHelp())
-	rootCmd.Flags().StringP("path", "p", ZATHURARC, "path to zathurarc location")
+	rootCmd.SetHelpTemplate(getRootHelp())
+	rootCmd.Flags().StringP("path", "p", zathurarcfile, "path to zathurarc location")
 }
 
-func GetRootHelp() string {
+func getRootHelp() string {
 	return `
 zathuraconf: change zathura colour scheme
 

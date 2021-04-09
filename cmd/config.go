@@ -41,12 +41,12 @@ map [fullscreen] f toggle_fullscreen
 }
 
 type ColourConfig struct {
-	Page             string `json:"page" validate:"iscolor"`
-	Text             string `json:"text" validate:"iscolor"`
-	Background       string `json:"background" validate:"iscolor"`
-	Highlight        string `json:"highlight" validate:"iscolor"`
-	HighlightActive  string `json:"highlight_active" validate:"iscolor"`
-	Error            string `json:"error" validate:"iscolor"`
+	Page            string `json:"page" validate:"iscolor"`
+	Text            string `json:"text" validate:"iscolor"`
+	Background      string `json:"background" validate:"iscolor"`
+	Highlight       string `json:"highlight" validate:"iscolor"`
+	HighlightActive string `json:"highlight_active" validate:"iscolor"`
+	Error           string `json:"error" validate:"iscolor"`
 }
 
 func isValidConfig(colourConfig ColourConfig) bool {

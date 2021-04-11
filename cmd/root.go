@@ -1,6 +1,9 @@
 package cmd
 
 import (
+	"bufio"
+	"fmt"
+	"os"
 	"os/user"
 
 	"github.com/spf13/cobra"
@@ -17,7 +20,17 @@ var rootCmd = &cobra.Command{
 	Long:  `change zathura colour scheme from command line`,
 	Run: func(cmd *cobra.Command, args []string) {
 		rcFile, _ := cmd.Flags().GetString("path")
-		writeConfig(args[0], rcFile)
+		force, _ := cmd.Flags().GetBool("force")
+		if force {
+			writeConfig(args[0], rcFile)
+		} else {
+			reader := bufio.NewReader(os.Stdin)
+			fmt.Print("rewriting zathura configuration: confirm? [y]: ")
+			text, _ := reader.ReadString('\n')
+			if text == "y" {
+				writeConfig(args[0], rcFile)
+			}
+		}
 	},
 }
 
@@ -27,6 +40,7 @@ func Execute() {
 
 func init() {
 	rootCmd.SetHelpTemplate(getRootHelp())
+	rootCmd.Flags().BoolP("force", "f", false, "force overwrite zathurarc without confirmation")
 	rootCmd.Flags().StringP("path", "p", zathurarcfile, "path to zathurarc location")
 }
 

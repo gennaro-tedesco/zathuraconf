@@ -68,6 +68,7 @@ Help commands:
 
 Flags:
   -h, --help   help for zathuraconf
+  -f, --force  force overwrite zathurarc without confirmation
   -p, --path   path to zathuraconf location: defaults to ~/.config/zathura/zathurarc
 `
 }

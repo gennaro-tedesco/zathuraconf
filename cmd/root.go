@@ -26,8 +26,7 @@ var rootCmd = &cobra.Command{
 		} else {
 			reader := bufio.NewReader(os.Stdin)
 			fmt.Print("rewriting zathura configuration: confirm? [y]: ")
-			text, _ := reader.ReadString('\n')
-			if text == "y" {
+			if text, _ := reader.ReadString('\n'); text == "y\n" {
 				writeConfig(args[0], rcFile)
 			}
 		}

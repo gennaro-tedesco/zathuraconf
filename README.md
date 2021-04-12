@@ -51,7 +51,11 @@ zathuraconf config.json
 
 ![demo](https://user-images.githubusercontent.com/15387611/114107808-f327f100-98d1-11eb-885f-27ff76b2504d.gif)
 
-This creates your custom zathura configuration file in the default path `~/.config/zathura/zathurarc`; if your zathura settings are elsewhere you can provide a different path via 
+This creates your custom zathura configuration file in the default path `~/.config/zathura/zathurarc`. The program asks for confirmation before writing the new settings; if you wish to skip this, pass the `-f` flag
+```
+zathuraconf -f config.json
+```
+If your zathura settings are elsewhere you can provide a different path via
 ```
 zathuraconf config.json -p /path/to/config/
 ```

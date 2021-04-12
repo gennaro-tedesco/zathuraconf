@@ -124,5 +124,6 @@ func writeConfig(colourFile string, rcFile string) {
 		file.WriteString("set index-active-bg \"" + colourConfig.Highlight + "\"\n")
 		file.WriteString("set index-active-fg \"" + colourConfig.Background + "\"\n")
 		file.WriteString("set recolor " + "true" + "\n")
+		fmt.Println("zathura configuration written to", rcFile)
 	}
 }

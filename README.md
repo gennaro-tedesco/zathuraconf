@@ -68,6 +68,7 @@ See `zathuraconf -h` for details.
 The colour schemes settings are appended to a default configuration of zathura commands [specified here](https://github.com/gennaro-tedesco/zathuraconf/blob/470c5d12378c8b29eff85b58818e0daa844edff7/cmd/config.go#L14-L41): these defaults are standard and natural, however should you feel the need to change them, modify those lines at will.
 
 ## Examples
+Check the [examples list](https://github.com/gennaro-tedesco/zathuraconf/tree/master/examples)!
 <details>
   <summary>Show gallery</summary>
 

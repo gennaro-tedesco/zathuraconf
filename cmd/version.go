@@ -7,7 +7,7 @@ import (
 )
 
 // VERSION number: change manually
-const VERSION = "1.1.0"
+const VERSION = "zathuraconf v1.1.1"
 
 var versionCmd = &cobra.Command{
 	Use:   "version",

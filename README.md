@@ -29,7 +29,7 @@ Create custom configurations for [zathura](https://pwmt.org/projects/zathura/) i
 ## Installation
 Go get it!
 ```
-go get -u -v github.com/gennaro-tedesco/zathuraconf
+go install github.com/gennaro-tedesco/zathuraconf@latest
 ```
 
 ## Usage

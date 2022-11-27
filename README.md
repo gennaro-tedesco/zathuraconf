@@ -64,9 +64,9 @@ in both cases make sure the folder path exists already.
 See `zathuraconf -h` for details.
 
 ## Docker
-If you wish to install from a docker container, specify your config in place of **JSONCONFIG**
+If you wish to install from a docker container, specify your config file next to ``--build-arg``
 ```
-docker run --rm --name zathuraconf $(docker build --build-arg config=**JSONCONFIG** -q .) >| ~/.config/zathura/zathurarc
+docker run --rm --name zathuraconf $(docker build --build-arg config=./config.json -q .) >| ~/.config/zathura/zathurarc
 ```
 
 ### Change defaults

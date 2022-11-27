@@ -4,7 +4,8 @@ FROM alpine:latest
 WORKDIR /root
 
 # Assumes config.json available
-COPY config.json .
+ARG config=config.json
+COPY ${config} ./config.json
 COPY entrypoint.sh .
 RUN chmod 0755 entrypoint.sh
 

@@ -63,6 +63,12 @@ in both cases make sure the folder path exists already.
 
 See `zathuraconf -h` for details.
 
+## Docker
+If you wish to build in a docker container, assuming a ``config.json`` is available in current directory run:
+```
+docker run --rm --name zathuraconf $(docker build -q .) >| ~/.config/zathura/zathurarc
+```
+There is a sample ``config.json`` provided
 
 ### Change defaults
 The colour schemes settings are appended to a default configuration of zathura commands [specified here](https://github.com/gennaro-tedesco/zathuraconf/blob/470c5d12378c8b29eff85b58818e0daa844edff7/cmd/config.go#L14-L41): these defaults are standard and natural, however should you feel the need to change them, modify those lines at will.

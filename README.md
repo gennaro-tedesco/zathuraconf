@@ -102,6 +102,11 @@ Run unit tests with
 go test -v ./cmd
 ```
 
+## Note
+As with most go packages, if it fails to be detected by your shell, you have to copy the zathuraconf binary into your /usr/local/bin
+
+If it is missing +x rights, those must be granted as well.
+
 ## Feedback
 If you find this application useful consider awarding it a ⭐, it is a great way to give feedback! Otherwise, any additional suggestions or merge request is warmly welcome!
 

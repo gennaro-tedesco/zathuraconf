@@ -31,7 +31,7 @@ Go get it!
 ```
 go install github.com/gennaro-tedesco/zathuraconf@latest
 ```
-
+optional ```chmod +x zathuraconf``` if necessary
 ## Usage
 Choose a colour configuration [from the examples](https://github.com/gennaro-tedesco/zathuraconf/tree/master/examples) or make your own `config.json`:
 ```
